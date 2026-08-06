@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Secrets / env
+.env
+.env.*
+
+# Experiment outputs (regenerable; may contain private hands / raw model output)
+# Root-anchored: src/megagem/data (game definitions) must stay tracked.
+/results/
+/data/
+/checkpoints/
+/wandb/
+
+# Local clones / heavyweight deps
+/prime-rl/
+
+# Auto-saved game transcripts
+megagem_game_*.txt
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

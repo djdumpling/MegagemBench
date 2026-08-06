@@ -1,0 +1,212 @@
+[
+  {
+    "id": "flex_3_diff",
+    "type": "flexible",
+    "description": "Collect any 3 different gems",
+    "requirement": {"type": "any_different", "count": 3},
+    "reward": 5
+  },
+  {
+    "id": "flex_2_same",
+    "type": "flexible",
+    "description": "Collect any 2 of the same gem",
+    "requirement": {"type": "any_same", "count": 2},
+    "reward": 5
+  },
+  {
+    "id": "flex_3_same",
+    "type": "flexible",
+    "description": "Collect any 3 of the same gem",
+    "requirement": {"type": "any_same", "count": 3},
+    "reward": 10
+  },
+  {
+    "id": "flex_4_diff",
+    "type": "flexible",
+    "description": "Collect any 4 different gems",
+    "requirement": {"type": "any_different", "count": 4},
+    "reward": 10
+  },
+  {
+    "id": "flex_2_pairs",
+    "type": "flexible",
+    "description": "Collect 2 pairs of gems",
+    "requirement": {"type": "pairs", "count": 2},
+    "reward": 15
+  },
+  {
+    "id": "specific_3_rbg",
+    "type": "specific_3",
+    "description": "Collect Red + Blue + Green",
+    "requirement": {"colors": ["Red", "Blue", "Green"]},
+    "reward": 10
+  },
+  {
+    "id": "specific_3_rbp",
+    "type": "specific_3",
+    "description": "Collect Red + Blue + Purple",
+    "requirement": {"colors": ["Red", "Blue", "Purple"]},
+    "reward": 10
+  },
+  {
+    "id": "specific_3_rby",
+    "type": "specific_3",
+    "description": "Collect Red + Blue + Yellow",
+    "requirement": {"colors": ["Red", "Blue", "Yellow"]},
+    "reward": 10
+  },
+  {
+    "id": "specific_3_rgp",
+    "type": "specific_3",
+    "description": "Collect Red + Green + Purple",
+    "requirement": {"colors": ["Red", "Green", "Purple"]},
+    "reward": 10
+  },
+  {
+    "id": "specific_3_rgy",
+    "type": "specific_3",
+    "description": "Collect Red + Green + Yellow",
+    "requirement": {"colors": ["Red", "Green", "Yellow"]},
+    "reward": 10
+  },
+  {
+    "id": "specific_3_rpy",
+    "type": "specific_3",
+    "description": "Collect Red + Purple + Yellow",
+    "requirement": {"colors": ["Red", "Purple", "Yellow"]},
+    "reward": 10
+  },
+  {
+    "id": "specific_3_bgp",
+    "type": "specific_3",
+    "description": "Collect Blue + Green + Purple",
+    "requirement": {"colors": ["Blue", "Green", "Purple"]},
+    "reward": 10
+  },
+  {
+    "id": "specific_3_bgy",
+    "type": "specific_3",
+    "description": "Collect Blue + Green + Yellow",
+    "requirement": {"colors": ["Blue", "Green", "Yellow"]},
+    "reward": 10
+  },
+  {
+    "id": "specific_3_bpy",
+    "type": "specific_3",
+    "description": "Collect Blue + Purple + Yellow",
+    "requirement": {"colors": ["Blue", "Purple", "Yellow"]},
+    "reward": 10
+  },
+  {
+    "id": "specific_3_gpy",
+    "type": "specific_3",
+    "description": "Collect Green + Purple + Yellow",
+    "requirement": {"colors": ["Green", "Purple", "Yellow"]},
+    "reward": 10
+  },
+  {
+    "id": "specific_2_rb",
+    "type": "specific_2",
+    "description": "Collect Red + Blue",
+    "requirement": {"colors": ["Red", "Blue"]},
+    "reward": 5
+  },
+  {
+    "id": "specific_2_rg",
+    "type": "specific_2",
+    "description": "Collect Red + Green",
+    "requirement": {"colors": ["Red", "Green"]},
+    "reward": 5
+  },
+  {
+    "id": "specific_2_rp",
+    "type": "specific_2",
+    "description": "Collect Red + Purple",
+    "requirement": {"colors": ["Red", "Purple"]},
+    "reward": 5
+  },
+  {
+    "id": "specific_2_ry",
+    "type": "specific_2",
+    "description": "Collect Red + Yellow",
+    "requirement": {"colors": ["Red", "Yellow"]},
+    "reward": 5
+  },
+  {
+    "id": "specific_2_bg",
+    "type": "specific_2",
+    "description": "Collect Blue + Green",
+    "requirement": {"colors": ["Blue", "Green"]},
+    "reward": 5
+  },
+  {
+    "id": "specific_2_bp",
+    "type": "specific_2",
+    "description": "Collect Blue + Purple",
+    "requirement": {"colors": ["Blue", "Purple"]},
+    "reward": 5
+  },
+  {
+    "id": "specific_2_by",
+    "type": "specific_2",
+    "description": "Collect Blue + Yellow",
+    "requirement": {"colors": ["Blue", "Yellow"]},
+    "reward": 5
+  },
+  {
+    "id": "specific_2_gp",
+    "type": "specific_2",
+    "description": "Collect Green + Purple",
+    "requirement": {"colors": ["Green", "Purple"]},
+    "reward": 5
+  },
+  {
+    "id": "specific_2_gy",
+    "type": "specific_2",
+    "description": "Collect Green + Yellow",
+    "requirement": {"colors": ["Green", "Yellow"]},
+    "reward": 5
+  },
+  {
+    "id": "specific_2_py",
+    "type": "specific_2",
+    "description": "Collect Purple + Yellow",
+    "requirement": {"colors": ["Purple", "Yellow"]},
+    "reward": 5
+  },
+  {
+    "id": "same_2_red",
+    "type": "same_2",
+    "description": "Collect 2 Red gems",
+    "requirement": {"color": "Red", "count": 2},
+    "reward": 5
+  },
+  {
+    "id": "same_2_blue",
+    "type": "same_2",
+    "description": "Collect 2 Blue gems",
+    "requirement": {"color": "Blue", "count": 2},
+    "reward": 5
+  },
+  {
+    "id": "same_2_green",
+    "type": "same_2",
+    "description": "Collect 2 Green gems",
+    "requirement": {"color": "Green", "count": 2},
+    "reward": 5
+  },
+  {
+    "id": "same_2_purple",
+    "type": "same_2",
+    "description": "Collect 2 Purple gems",
+    "requirement": {"color": "Purple", "count": 2},
+    "reward": 5
+  },
+  {
+    "id": "same_2_yellow",
+    "type": "same_2",
+    "description": "Collect 2 Yellow gems",
+    "requirement": {"color": "Yellow", "count": 2},
+    "reward": 5
+  }
+]

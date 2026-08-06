@@ -1,0 +1,67 @@
+# SFT training config for Qwen3-4B-Instruct on MegaGem
+#
+# Trains on expert game traces (top-2 final-score players) with seed-disjoint
+# train/validation splits and plain Instruct assistant turns.
+#
+# Usage (run from MegagemBench repo root — `[data].name` below is resolved
+# against the launch cwd):
+#   python -m src.training.preprocess_sft                # first, prepare data
+#   prime-rl/.venv/bin/sft @ configs/sft/megagem.toml    # then, train
+#
+# NOTE: do NOT use `uv run sft` — it re-resolves prime-rl's lockfile and
+# clobbers the pinned flash-attn / torch wheels. Invoke the venv binary directly.
+
+output_dir = "checkpoints/qwen3-4b-instruct-megagem-sft"
+max_steps = 1200  # ~3.1 epochs at 6153 train examples / batch 16 = ~385 steps/epoch
+
+[model]
+name = "Qwen/Qwen3-4B-Instruct-2507"
+
+[model.lora]
+rank = 32
+alpha = 64
+dropout = 0.05
+target_modules = ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+
+[data]
+type = "sft"
+name = "data/sft_processed"
+batch_size = 16
+micro_batch_size = 1
+seq_len = 4096
+
+[optim]
+lr = 2e-4
+max_norm = 1.0
+
+[scheduler]
+type = "cosine"
+warmup_steps = 50
+
+[ckpt]
+interval = 200
+
+[ckpt.weights]
+# Save the trained LoRA adapter alongside the (frozen) base weights at each
+# interval. Without this, prime-rl's `clean_lora_state_dict` strips lora_A/lora_B
+# from the saved state dict, so `weights/step_N/` ends up with base weights only
+# and the trained LoRA exists only in the DCP resume state under
+# `checkpoints/step_N/trainer/`. With `save_adapter_separately = true`, each
+# `weights/step_N/lora_adapters/` gets a proper HF-format adapter that
+# `scripts/training/merge_sft_adapter.py` can load and merge with base Qwen for eval.
+save_adapter_separately = true
+
+[val]
+interval = 200
+
+[val.data]
+type = "sft"
+name = "data/sft_processed"
+splits = ["validation"]
+batch_size = 16
+micro_batch_size = 1
+seq_len = 4096
+
+[wandb]
+project = "megagem"
+name = "sft-qwen3-4b-instruct-v2"

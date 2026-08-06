@@ -1,0 +1,57 @@
+{
+  "A": {
+    "description": "Linear - value rises steadily with each copy in the display (count 5 means 5 or more)",
+    "values": [
+      {"count": 0, "value_per_gem": 0},
+      {"count": 1, "value_per_gem": 4},
+      {"count": 2, "value_per_gem": 8},
+      {"count": 3, "value_per_gem": 12},
+      {"count": 4, "value_per_gem": 16},
+      {"count": 5, "value_per_gem": 20}
+    ]
+  },
+  "B": {
+    "description": "Inverse linear - each extra copy in the display cuts value evenly (count 5 means 5 or more)",
+    "values": [
+      {"count": 0, "value_per_gem": 20},
+      {"count": 1, "value_per_gem": 16},
+      {"count": 2, "value_per_gem": 12},
+      {"count": 3, "value_per_gem": 8},
+      {"count": 4, "value_per_gem": 4},
+      {"count": 5, "value_per_gem": 0}
+    ]
+  },
+  "C": {
+    "description": "Convex - value accelerates as the color fills the display (count 5 means 5 or more)",
+    "values": [
+      {"count": 0, "value_per_gem": 0},
+      {"count": 1, "value_per_gem": 2},
+      {"count": 2, "value_per_gem": 5},
+      {"count": 3, "value_per_gem": 9},
+      {"count": 4, "value_per_gem": 14},
+      {"count": 5, "value_per_gem": 20}
+    ]
+  },
+  "D": {
+    "description": "Inverse concave - scarce colors are worth most, value decaying faster as copies appear (count 5 means 5 or more)",
+    "values": [
+      {"count": 0, "value_per_gem": 20},
+      {"count": 1, "value_per_gem": 18},
+      {"count": 2, "value_per_gem": 15},
+      {"count": 3, "value_per_gem": 11},
+      {"count": 4, "value_per_gem": 6},
+      {"count": 5, "value_per_gem": 0}
+    ]
+  },
+  "E": {
+    "description": "Threshold - peaks at 3 copies in the display, then collapses (count 5 means 5 or more)",
+    "values": [
+      {"count": 0, "value_per_gem": 0},
+      {"count": 1, "value_per_gem": 4},
+      {"count": 2, "value_per_gem": 10},
+      {"count": 3, "value_per_gem": 18},
+      {"count": 4, "value_per_gem": 6},
+      {"count": 5, "value_per_gem": 0}
+    ]
+  }
+}
